@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title>Chocolate Bars: Results</title>
+</head>
+<body>
+    <h1>Here are your results!</h1>
+    <table>
+        <tr>
+            <th> Team name </th>
+            {% for att in attributes%}
+            <th>{{ att }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in results %}
+        <tr>
+            {% for i in range(0,length)%}
+            <td>{{row[i]}}</td>
+            {% endfor %}       
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

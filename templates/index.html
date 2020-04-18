@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title>NBA Stats Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the NBA Team Stats Browser</h1>
+    <form action='/results_team' method='POST'>
+    <p>
+    Sort by: <br/>
+        <input type='radio' name='sort' 
+                value='Win_lose_percentage' checked='checked'/> Win-loss Percentage <br/>
+        <input type='radio' name='sort' 
+                value='championship'/> Championship <br/>
+    </p>
+    <p>
+    Sort direction: <br/>
+        <input type='radio' name='dir'
+            value='desc' checked='checked'/>High to Low<br/>
+        <input type='radio' name='dir'
+            value='asc'/>Low to High<br/>
+    </p>
+    <p>
+    Check what you want to see:<br>
+    <ul>
+      <li>League<input type="checkbox" name="attribute" value="League"></li>
+      <li>Since<input type="checkbox" name="attribute" value="Since"></li>
+      <li>Until<input type="checkbox" name="attribute" value="Until"></li>
+      <li>Year<input type="checkbox" name="attribute" value="Year"></li>
+      <li>Games<input type="checkbox" name="attribute" value="Games"></li>
+      <li>Wins<input type="checkbox" name="attribute" value="Wins"></li>
+      <li>Losses<input type="checkbox" name="attribute" value="Losts"></li>
+      <li>Win_lost_percentage<input type="checkbox" name="attribute" value="Win_lose_percentage"></li>
+      <li>Playoffs<input type="checkbox" name="attribute" value="Playoffs"></li>
+      <li>Divisions<input type="checkbox" name="attribute" value="Divisions"></li>
+      <li>Conference_champion<input type="checkbox" name="attribute" value="Conference_champ"></li>
+      <li>Championship<input type="checkbox" name="attribute" value="Championship"></li>
+    </ul>
+    </p>
+
+    <input type='submit' value='Get teams'/>
+    </form>
+    <br>
+    <br>
+
+    <form action='/position' method='POST'> 
+        Click the button to get the average height for each position:<br><br>
+        <input type='submit' value='Get Heights'/>
+    </form>
+    <br>
+    <br>
+
+
+
+    <FORM METHOD=POST ACTION="/player" name="form1">
+      Please select a team:
+     <SELECT NAME="team">
+       <OPTION VALUE="0">Please select a team</OPTION>
+       <OPTION VALUE="Atlanta Hawks">Atlanta Hawks </OPTION>
+       <OPTION VALUE="Boston Celtics">Boston Celtics </OPTION>
+       <OPTION VALUE="Brooklyn Nets">Brooklyn Nets </OPTION>
+       <OPTION VALUE="Charlotte Hornets">Charlotte Hornets </OPTION>
+       <OPTION VALUE="Chicago Bulls">Chicago Bulls </OPTION>
+       <OPTION VALUE="Cleveland Cavaliers">Cleveland Cavaliers </OPTION>
+       <OPTION VALUE="Dallas Mavericks">Dallas Mavericks</OPTION>
+       <OPTION VALUE="Denver Nuggets">Denver Nuggets </OPTION>
+       <OPTION VALUE="Detroit Pistons">Detroit Pistons </OPTION>
+       <OPTION VALUE="Golden State Warriors">Golden State Warriors </OPTION>
+       <OPTION VALUE="Houston Rockets">Houston Rockets </OPTION>
+       <OPTION VALUE="Indiana Pacers">Indiana Pacers </OPTION>
+       <OPTION VALUE="Los Angeles Clippers">Los Angeles Clippers </OPTION>
+       <OPTION VALUE="Los Angeles Lakers">Los Angeles Lakers </OPTION>
+       <OPTION VALUE="Memphis Grizzlies">Memphis Grizzlies </OPTION>
+       <OPTION VALUE="Miami Heat">Miami Heat </OPTION>
+       <OPTION VALUE="Milwaukee Bucks">Milwaukee Bucks </OPTION>
+       <OPTION VALUE="Minnesota Timberwolves">Minnesota Timberwolves </OPTION>
+       <OPTION VALUE="New Orleans Pelicans">New Orleans Pelicans </OPTION>
+       <OPTION VALUE="New York Knicks">New York Knicks </OPTION>
+       <OPTION VALUE="Oklahoma City Thunder">Oklahoma City Thunder </OPTION>
+       <OPTION VALUE="Orlando Magic">Orlando Magic </OPTION>
+       <OPTION VALUE="Philadelphia 76ers">Philadelphia 76ers </OPTION>
+       <OPTION VALUE="Phoenix Suns">Phoenix Suns </OPTION>
+       <OPTION VALUE="Portland Trail Blazers">Portland Trail Blazers </OPTION>
+       <OPTION VALUE="Sacramento Kings">Sacramento Kings </OPTION>
+       <OPTION VALUE="San Antonio Spurs">San Antonio Spurs </OPTION>
+       <OPTION VALUE="Toronto Raptors">Toronto Raptors </OPTION>
+       <OPTION VALUE="Utah Jazz">Utah Jazz </OPTION>
+       <OPTION VALUE="Washington Wizards">Washington Wizards </OPTION>
+     </SELECT>
+      <br>
+      <br>
+      Player id: <input type="text" name="player_id"><br><br>
+      <input type='submit' value='Get Player'/>
+   </FORM>
+   <br>
+    <br>
+   <form action='/college' method='POST'> 
+        Click the button to see the top 10 universities with the most drafted players:<br><br>
+        <input type='submit' value='Get Colleges'/>
+    </form>
+    <br>
+    <br>
+
+     <form action='/height' method='POST'> 
+        Click the button to see the average height of each team:<br><br>
+        <input type='submit' value='Get Heights'/>
+    </form>
+    <br>
+    <br>
+
+    <form action='/season' method='POST'> 
+        Check the NBA player stats for the season you indicate:<br><br>
+        <input type="text" name="year">
+        <input type='submit' value='Get info for season'/>
+    </form>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

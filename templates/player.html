@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title>Chocolate Bars: Results</title>
+</head>
+<body>
+    <h1>Here are your results!</h1>
+    <table>
+        <tr>
+            <th>Team name</th>
+            <th>Player id</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Birthday</th>
+            <th>Year of experience</th>
+            <th>College</th>
+        </tr>
+        {% for row in result %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <td>{{row[7]}}</td>
+            <td>{{row[8]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
