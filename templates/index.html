@@ -4,26 +4,91 @@
 <head>
     <meta charset="UTF8"/>
     <title>NBA Stats Home Page</title>
+    <style type="text/css">
+      body{
+          background-color: #F5f6f6;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+      header{
+        
+        width: 100%;
+        /*height:500px;*/
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #006ab4;
+  /*s*/
+      }
+
+      b{
+        font-size: 17px;
+      }
+      h1{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+      }
+      .teamstats{
+        align: center;
+      }
+/*      ul li{
+            display: inline-block;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-left: 30px;
+        }*/
+      input[type="submit"] { 
+        color:white; 
+        height: 30px;
+        width: 140px;
+        font: bold 84% 'trebuchet ms',helvetica,sans-serif; 
+        background-color:#d81f56; 
+        border:1px none; 
+        border-radius: 5px;
+        border-color: #696 #363 #363 #696; 
+    }  
+
+        ul{
+          list-style-type: square;
+        }
+
+        form{
+          margin:20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+
+          padding-left: 80px;
+          padding-right: 30px;
+          border-radius: 10px;
+          background-color: white;
+        }
+        h2{
+          text-align: center;
+        }
+      </style>
 </head>
 <body>
+  <header>
     <h1>Welcome to the NBA Team Stats Browser</h1>
-    <form action='/results_team' method='POST'>
+  </header>
+    <form action='/results_team' method='POST' class='teamstats'>
+    <h2>Team Stats</h2>
     <p>
-    Sort by: <br/>
+    <b>Sort by:</b> <br/>
         <input type='radio' name='sort' 
                 value='Win_lose_percentage' checked='checked'/> Win-loss Percentage <br/>
         <input type='radio' name='sort' 
                 value='championship'/> Championship <br/>
     </p>
     <p>
-    Sort direction: <br/>
+    <b>Sort direction:</b><br/>
         <input type='radio' name='dir'
             value='desc' checked='checked'/>High to Low<br/>
         <input type='radio' name='dir'
             value='asc'/>Low to High<br/>
     </p>
     <p>
-    Check what you want to see:<br>
+    <b>Check what you want to see:</b><br>
     <ul>
       <li>League<input type="checkbox" name="attribute" value="League"></li>
       <li>Since<input type="checkbox" name="attribute" value="Since"></li>
@@ -46,6 +111,7 @@
     <br>
 
     <form action='/position' method='POST'> 
+       <h2>Heights on Court</h2>
         Click the button to get the average height for each position:<br><br>
         <input type='submit' value='Get Heights'/>
     </form>
@@ -55,6 +121,7 @@
 
 
     <FORM METHOD=POST ACTION="/player" name="form1">
+      <h2>Player Info</h2>
       Please select a team:
      <SELECT NAME="team">
        <OPTION VALUE="0">Please select a team</OPTION>
@@ -97,6 +164,7 @@
    <br>
     <br>
    <form action='/college' method='POST'> 
+        <h2>Best Colleges</h2>
         Click the button to see the top 10 universities with the most drafted players:<br><br>
         <input type='submit' value='Get Colleges'/>
     </form>
@@ -104,6 +172,7 @@
     <br>
 
      <form action='/height' method='POST'> 
+        <h2>Team average heights</h2>
         Click the button to see the average height of each team:<br><br>
         <input type='submit' value='Get Heights'/>
     </form>
@@ -111,8 +180,9 @@
     <br>
 
     <form action='/season' method='POST'> 
+        <h2>Player Performance</h2>
         Check the NBA player stats for the season you indicate:<br><br>
-        <input type="text" name="year">
+        <input type="text" name="year"><br><br>
         <input type='submit' value='Get info for season'/>
     </form>
     <br>

@@ -273,7 +273,7 @@ def db_insert():
 	    	"Id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
 	        "Team_name" TEXT NOT NULL,
 	        "Intro_url" TEXT,
-	        "Leage" TEXT NOT NULL,
+	        "League" TEXT NOT NULL,
 	        "Since"  TEXT NOT NULL,
 	        "Until" TEXT NOT NULL,
 	        "Year" INTEGER NOT NULL,
@@ -395,6 +395,7 @@ def show_player(team,player_id):
 
 @app.route('/')
 def index():
+	db_insert()
 	return render_template('index.html')
 
 @app.route('/results_team', methods=['POST'])
@@ -524,7 +525,6 @@ def search_season():
 
 
 if __name__ == '__main__':
-	# db_insert()
 	app.run(debug=True)
 
 
