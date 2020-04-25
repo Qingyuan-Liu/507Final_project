@@ -395,7 +395,7 @@ def show_player(team,player_id):
 
 @app.route('/')
 def index():
-	# db_insert()
+	db_insert()
 	return render_template('index.html')
 
 @app.route('/results_team', methods=['POST'])
